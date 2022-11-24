@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
       <ListBox></ListBox>
 
     </div>
@@ -16,3 +16,6 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+
+</style>

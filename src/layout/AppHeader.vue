@@ -65,6 +65,7 @@ export default {
  top: 0;
  left: 0;
  background-color: #fff;
+ z-index: 9999;
 }
 .navbar{
     // background-color: #fff !important;

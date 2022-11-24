@@ -6,6 +6,7 @@ import Argon from "./plugins/argon-kit";
 import './registerServiceWorker'
 
 Vue.config.productionTip = false;
+
 Vue.use(Argon);
 new Vue({
   router,

@@ -37,18 +37,7 @@ export default {
       this.$router.push({
         name: 'landing',
         query: {
-          artsType: item.artsType,
-          collectionType: item.collectionType,
-          curPrice:item.curPrice,
-          frontPage: item.frontPage,
-          headPortrait: item.headPortrait,
-          id:item.id,
-          isfavorite:item.isfavorite,
-          nickname:item.nickname,
-          preSaleStatus:item.preSaleStatus,
-          title:item.title,
-          
-          
+          id:item.id,        
         }
       })
     }

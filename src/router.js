@@ -6,12 +6,14 @@ import Components from "./views/Components.vue";
 import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
-// import Profile from "./views/Profile.vue";
+import Item from "./views/Item.vue";
+import Starter from "./views/Starter.vue";
+import Download from "./views/Download.vue";
 
 Vue.use(Router);
 
 export default new Router({
-  mode: "hash",
+  mode: "history",
   linkExactActiveClass: "active",
   routes: [
     {
@@ -20,8 +22,8 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Components,
-        footer: AppFooter
-      }
+        footer: AppFooter,
+      },
     },
     {
       path: "/landing",
@@ -29,8 +31,26 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Landing,
-        footer: AppFooter
-      }
+        footer: AppFooter,
+      },
+    },
+    {
+      path: "/item",
+      name: "item",
+      components: {
+        header: AppHeader,
+        default: Item,
+        footer: AppFooter,
+      },
+    },
+      {
+      path: "/download",
+      name: "download",
+      components: {
+        header: AppHeader,
+        default: Download,
+        footer: AppFooter,
+      },
     },
     {
       path: "/login",
@@ -38,8 +58,8 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Login,
-        footer: AppFooter
-      }
+        footer: AppFooter,
+      },
     },
     {
       path: "/register",
@@ -47,24 +67,24 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Register,
-        footer: AppFooter
-      }
+        footer: AppFooter,
+      },
     },
-    // {
-    //   path: "/profile",
-    //   name: "profile",
-    //   components: {
-    //     header: AppHeader,
-    //     default: Profile,
-    //     footer: AppFooter
-    //   }
-    // }
+     {
+      path: "/starter",
+      name: "starter",
+      components: {
+        header: AppHeader,
+        default: Starter,
+        footer: AppFooter,
+      },
+    },
   ],
-  scrollBehavior: to => {
+  scrollBehavior: (to) => {
     if (to.hash) {
       return { selector: to.hash };
     } else {
       return { x: 0, y: 0 };
     }
-  }
+  },
 });

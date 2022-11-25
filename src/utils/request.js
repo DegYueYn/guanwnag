@@ -18,7 +18,7 @@ instance.interceptors.request.use(
 //响应拦截器
 instance.interceptors.response.use(
   (res) => {
-    console.log("响应拦截器", res.data);
+    // console.log("响应拦截器", res.data);
     return res.data;
   },
   (err) => {

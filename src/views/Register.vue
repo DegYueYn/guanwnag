@@ -77,5 +77,12 @@
 <script>
 export default {};
 </script>
-<style>
+<style lang="scss" scoped>
+.section {
+background-color: #00DBDE;
+background-image: linear-gradient(315deg, #00DBDE 0%, #FC00FF 100%);
+
+
+
+}
 </style>

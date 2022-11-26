@@ -10,7 +10,7 @@ npm install
 npm run serve
 ```
 
-### 遇到 opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error‘ ].....
+### 遇到Node版本过高的Error opensslErrorStack: [ ‘error:03000086:digital envelope routines::initialization error‘ ].....
 
 ```
 $env:NODE_OPTIONS="--openssl-legacy-provider"

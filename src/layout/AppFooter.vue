@@ -76,7 +76,9 @@ export default {
 <style>
 .copyright {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
+  align-content: center;
+  text-align: center;
 }
 .format {
   display: flex;
@@ -93,6 +95,7 @@ export default {
   font-weight: 600;
 }
 .mg {
+  font-size: 20px;
   margin-top: -5px;
 }
 </style>

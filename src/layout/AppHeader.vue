@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <base-nav type="" expand>
-      <img class="logo" src="../assets/images/logo.png" />
+      <img class="logo" src="../assets/images/logo.png" @click="TO(0)" />
       <div class="row" slot="content-header" slot-scope="{ closeMenu }">
         <div class="col-12 collapse-close dakr">
           <close-button @click="closeMenu"></close-button>
@@ -72,6 +72,8 @@ export default {
         this.$router.push("/login");
       } else if (item == 5) {
         this.$router.push("/register");
+      }else if(item==0){
+        this.$router.push("/");
       }
     },
   },
@@ -91,6 +93,7 @@ export default {
 }
 
 .logo {
+  cursor: pointer;
   width: 64px;
   height: 32px;
   object-fit: cover;

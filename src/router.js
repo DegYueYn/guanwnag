@@ -8,6 +8,8 @@ import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Item from "./views/Item.vue";
 import Starter from "./views/Starter.vue";
+import Xieyi from "./views/Xieyi.vue";
+import Yinsi from "./views/Yinsi.vue";
 import Download from "./views/Download.vue";
 
 Vue.use(Router);
@@ -53,21 +55,31 @@ export default new Router({
       },
     },
     {
+      path: "/xieyi",
+      name: "xieyi",
+      components: {
+        default: Xieyi,
+      },
+    },
+    {
+      path: "/yinsi",
+      name: "yinsi",
+      components: {
+        default: Yinsi,
+      },
+    },
+    {
       path: "/login",
       name: "login",
       components: {
-        header: AppHeader,
         default: Login,
-        footer: AppFooter,
       },
     },
     {
       path: "/register",
       name: "register",
       components: {
-        header: AppHeader,
         default: Register,
-        footer: AppFooter,
       },
     },
      {

@@ -114,4 +114,13 @@ export default {
   width: 80px;
   background-color: #4f46e5;
 }
+@media only screen and (max-device-width : 768px) {
+      .bord {
+        background-color: #fff;
+        font-size: 16px;
+        border: none;
+        text-align: start;
+        line-height: 0px;
+}
+}
 </style>

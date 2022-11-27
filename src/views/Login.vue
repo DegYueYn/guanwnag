@@ -45,8 +45,8 @@
                   </div>
 
                   <div class="des">
-                    我已阅读并同意<span class="xieyi" @click="to(1)">《ARCC 用户协议》</span
-                    ><span class="xieyi" @click="to(2)">《ARCC 隐私协议》</span>
+                    我已阅读并同意<a class="xieyi" href="https://h5.arcnftclub.com/agreement/">《ARCC 用户协议》</a
+                    ><a class="xieyi" href="https://h5.arcnftclub.com/privicy/" >《ARCC 隐私协议》</a>
                     18岁以下用户欢迎发布作品,请勿参与购买！
                   </div>
                 </div>
@@ -124,13 +124,6 @@ export default {
         console.log("登录了");
         this.$router.go(0);
       }
-    },
-    to(item){
-        if(item==1){
-            this.$router.push('/xieyi')
-        }else{
-            this.$router.push('/yinsi')
-        }
     },
     toRegister() {
       this.$router.push("/register");

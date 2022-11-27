@@ -55,8 +55,13 @@
                   </div>
 
                   <div class="des">
-                    我已阅读并同意<span class="xieyi" @click="to(1)">《ARCC 用户协议》</span
-                    ><span class="xieyi" @click="to(2)">《ARCC 隐私协议》</span>
+                    我已阅读并同意<a
+                      class="xieyi"
+                      href="https://h5.arcnftclub.com/agreement/"
+                      >《ARCC 用户协议》</a
+                    ><a class="xieyi" href="https://h5.arcnftclub.com/privicy/"
+                      >《ARCC 隐私协议》</a
+                    >
                     18岁以下用户欢迎发布作品,请勿参与购买！
                   </div>
                 </div>
@@ -79,7 +84,7 @@
       <template slot="header">
         <h5 class="modal-title" id="exampleModalLabel">提示</h5>
       </template>
-      <div id='text'>注册之前请勾选相关协议!</div>
+      <div id="text">注册之前请勾选相关协议!</div>
     </modal>
   </section>
 </template>
@@ -91,53 +96,49 @@ export default {
   },
   data() {
     return {
-        phone:undefined,
-        code:undefined,
-        password_1:undefined,
-        password_2:undefined,
-       radio: false,
-       modals: false,
+      phone: undefined,
+      code: undefined,
+      password_1: undefined,
+      password_2: undefined,
+      radio: false,
+      modals: false,
     };
   },
   methods: {
     register() {
-        if(!this.phone||!this.code||!this.password_1||!this.password_2){      
+      if (!this.phone || !this.code || !this.password_1 || !this.password_2) {
         this.modals = true;
-        document.getElementById('text').innerHTML='请填写完整的表单信息!'
+        document.getElementById("text").innerHTML = "请填写完整的表单信息!";
         setTimeout(() => {
           this.modals = false;
         }, 1000);
         return;
-        }
-        if(this.password_1!=this.password_2){
+      }
+      if (this.password_1 != this.password_2) {
         this.modals = true;
-        document.getElementById('text').innerHTML='两次输入的密码不一致!'
+        document.getElementById("text").innerHTML = "两次输入的密码不一致!";
         setTimeout(() => {
           this.modals = false;
         }, 1000);
         return;
-        }
+      }
       if (this.radio == false) {
         this.modals = true;
-        document.getElementById('text').innerHTML='注册之前请勾选相关协议!'
+        document.getElementById("text").innerHTML = "注册之前请勾选相关协议!";
         setTimeout(() => {
           this.modals = false;
         }, 1000);
         return;
-      }else{
-         console.log("注册了");
-        this.$router.push('/login');
+      } else {
+        console.log("注册了");
+        this.$router.push("/login");
       }
     },
-    to(item){
-        if(item==1){
-            this.$router.push('/xieyi')
-        }else if(item==3){
-this.$router.push('/login')
-        }else {
-            this.$router.push('/yinsi')
-        }
-    }
+    to(item) {
+      if (item == 3) {
+        this.$router.push("/login");
+      }
+    },
   },
 };
 </script>
@@ -164,15 +165,15 @@ this.$router.push('/login')
 }
 .space {
   display: flex;
-//   margin-top: 20px;
+  //   margin-top: 20px;
   justify-content: space-evenly;
   .my-4 {
     width: 300px;
   }
 }
 
-.xieyi{
-    color: blue;
-    cursor: pointer;
+.xieyi {
+  color: blue;
+  cursor: pointer;
 }
 </style>

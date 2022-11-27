@@ -12,7 +12,6 @@ export default {
   name: "components",
   components: {
     ListBox,
-
   }
 };
 </script>

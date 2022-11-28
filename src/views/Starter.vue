@@ -32,14 +32,14 @@ export default {
     }
   },
   methods: {
-    Todetail(item) {
-    //   console.log(item)
-    //   this.$router.push({
-    //     name: 'starter',
-    //     query: {
-    //       id:item.id,        
-    //     }
-    //   })
+      Todetail(item) {
+        console.log(item)
+      this.$router.push({
+        name: 'startTheme',
+        query: {
+          id:item.id,        
+        }
+      })
     }
   }
 };

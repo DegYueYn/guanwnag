@@ -16,4 +16,9 @@ export const List = () =>
     // 首发列表
 
    export const getSstarter = (data) =>
-    request.post("/nft/api/theme/getThemeList?usrId=1&usrHash=1",data );
+     request.post("/nft/api/theme/getThemeList?usrId=1&usrHash=1", data);
+    
+   //首发详情
+   export const getDetailWeb = (data) =>
+     request.post("/nft/api/theme/getDetailWeb?usrId=1&usrHash=1", data);
+

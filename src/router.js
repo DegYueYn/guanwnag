@@ -9,11 +9,12 @@ import Register from "./views/Register.vue";
 import Item from "./views/Item.vue";
 import Starter from "./views/Starter.vue";
 import Download from "./views/Download.vue";
+import  StartTheme from "./views/StartTheme.vue";
 
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: "hash",
   linkExactActiveClass: "active",
   routes: [
     {
@@ -72,6 +73,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Starter,
+        footer: AppFooter,
+      },
+    },
+        {
+      path: "/startTheme",
+      name: "startTheme",
+      components: {
+        header: AppHeader,
+        default: StartTheme,
         footer: AppFooter,
       },
     },

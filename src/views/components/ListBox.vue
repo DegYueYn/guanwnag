@@ -34,12 +34,27 @@ export default {
   methods: {
     Todetail(item) {
       console.log(item)
-      this.$router.push({
+      if (item.artsType == 5) { 
+         this.$router.push({
         name: 'landing',
         query: {
           id:item.id,        
         }
       })
+
+      } else if (item.artsType == 1) {
+          this.$router.push({
+        name: 'item',
+        query: {
+          id: item.id,
+          flag:'start'        
+        }
+      })
+
+       }
+
+    
+     
     }
   }
 };
